@@ -14,24 +14,6 @@ video = cv2.VideoCapture('/Users/juancachafeiro/Movies/Us_CV/Unprocessed_Video.m
 
 centers = pd.DataFrame(columns=['Frame', 'Center'])
 
-# for index, row in roi_df.iterrows():
-# 	roi_array = row['Roi']
-# 	rois_ctrs = []
-# 	weight_sum = 0
-# 	for x in roi_array:
-# 		weight = (np.absolute(x[2]-x[0]))*(np.absolute(x[3]-x[1]))
-# 		weight_sum += weight
-# 		center = x[0]+(x[2]-x[0])//2
-# 		rois_ctrs.append({'weight':weight, 'ctr':center})
-
-# 	center_sum = 0
-# 	for x in rois_ctrs:
-# 		x['weight']/=weight_sum
-# 		center_sum += x['ctr']*x['weight']
-		
-# 	if center_sum > 0:
-# 		print(center_sum)
-# 		centers = centers.append({'Frame': row['Frame'], 'Center': center_sum}, ignore_index=True)
 
 def pixels_to_meters(pixel_value, pixels_per_meter):
 	return pixel_value/pixels_per_meter
