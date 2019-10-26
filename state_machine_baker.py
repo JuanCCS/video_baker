@@ -160,18 +160,7 @@ class Measuring(State):
 			return VideoBaker.waiting
 		return VideoBaker.measuring
 
-# class Baking(State):
-# 	# Bakes the measurements into a new video with all the data incorporated in the video
-# 	# Max_Speed, Max_Acceleration, Graphs, All Mounted on the Video
-# 	def run(self):
-# 		bake_frame(frame)
-
-# 	def transition(self, input):
-# 		if input == MouseAction.appears:
-# 			return MouseTrap.luring
-# 		return MouseTrap.waiting
-
-
+	
 class VideoBaker(StateMachine):
     def __init__(self):
         # Initial state
